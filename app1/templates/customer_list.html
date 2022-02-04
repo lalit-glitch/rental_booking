@@ -1,0 +1,50 @@
+{% include 'base.html' %}
+
+<title> abc </title>
+<style>
+#customers {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#customers td, #customers th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#customers tr:nth-child(even){background-color: #f2f2f2;}
+
+#customers tr:hover {background-color: #ddd;}
+
+#customers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #04AA6D;
+  color: white;
+}
+</style>
+{% block content %}
+<div class="container">
+    <table id="customers" style="font-size:100%; color:red" >
+
+<!--    <tr>-->
+<!--<th>Customer_Name</th>-->
+<!--<th>Rental_date</th>-->
+<!--<th>Return_date</th>-->
+<!--<th>Vehicle_type</th>-->
+<!--    </tr>-->
+
+    <tr>
+        {% for i in abcd %}
+        <td>{{i.custom_name}}</td>
+<!--        <td>{{i.rental_date}}</td>-->
+<!--        <td>{{i.return_date}}</td>-->
+<!--        <td>{{i.vehicle_type}}</td>-->
+    </tr>
+    {% endfor %}
+    </table>
+</div>
+{% endblock %}
+

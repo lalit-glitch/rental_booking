@@ -1,0 +1,105 @@
+{% include 'base.html' %}
+
+<title>  </title>
+<style>
+#customers {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#customers td, #customers th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#customers tr:nth-child(even){background-color: #f2f2f2;}
+
+#customers tr:hover {background-color: #ddd;}
+
+#customers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #04AA6D;
+  color: white;
+}
+</style>
+{% block content %}
+
+ <table id="customers" style="font-size:100%; color:red" >
+
+    <tr>
+<th>Vehicle_name</th>
+<th>Inventory</th>
+    </tr>
+
+    <tr>
+        {% for i in abc %}
+        <td>{{i.vehicle_name}}</td>
+        <td>{{i.inventory}}</td>
+    </tr>
+    {% endfor %}
+    </table>
+
+{% endblock %}
+
+
+
+<!--<html lang="en">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <title>Title</title>-->
+<!--/*Align the title to the center of the page*/-->
+<!--.table{-->
+<!--	font-size: 13px;-->
+<!--	text-align: center;-->
+<!--	width: 95%;-->
+<!--	margin: auto;-->
+<!--	text-align: center;-->
+<!--}-->
+
+<!--/*Make alternating colors for the table rows*/-->
+<!--.table tr:nth-child(odd){-->
+<!--	background: #B8CAE4-->
+<!--}-->
+
+<!--.table tr:nth-child(even){-->
+<!--	background: #dae5f4-->
+<!--}-->
+
+<!--th {-->
+<!--  background-color: #337ab7;-->
+<!--  color: white;-->
+<!--}-->
+
+<!--.display_table{-->
+<!--	border-bottom-right-radius: 20px;-->
+<!--	/*border-bottom-left-radius: 20px;*/-->
+<!--	padding-left: 5px;-->
+<!--	padding-right: 5px;-->
+<!--	padding-bottom: 20px;-->
+<!--	box-shadow: 12px 12px 20px 6px #2e6da4;-->
+<!--}-->
+<!--</head>-->
+<!--<body>-->
+<!--<div class="display_table">-->
+<!--<table class='table table-dark table-stripped'>-->
+<!--        <thead>-->
+<!--          <tr>-->
+<!--            <th>Vehicle</th>-->
+<!--            <th>Inventory</th>-->
+<!--          </tr>-->
+<!--        </thead>-->
+<!--    <tbody>-->
+<!--      {% for i in objects %}-->
+<!--          <tr>-->
+<!--            <td>{{i.vehicle}}</td>-->
+<!--            <td>{{i..inventory}}</td>-->
+<!--          </tr>-->
+<!--      {% endfor %}-->
+<!--    </tbody>-->
+<!--    </table>-->
+<!--</div>-->
+<!--</body>-->
+<!--</html>-->
